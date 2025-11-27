@@ -60,8 +60,8 @@ class _PizzaDetailsState extends State<PizzaDetails> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.asset(
-              'assets/img/pizzas/${widget.pizza.image}',
+            Image.network(
+              widget.pizza.image,
               height: 200,
               fit: BoxFit.cover,
             ),

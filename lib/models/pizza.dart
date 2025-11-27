@@ -26,5 +26,15 @@ class Pizza {
     OptionItem(1, "Base crême", supplement: 2),
   ];
 
+  Pizza.fromJson(Map<String, dynamic> json)
+      : id = json['id'],
+        title = json['title'],
+        garniture = json['garniture'],
+        image = json['image'],
+        price = json['price'],
+        pate = 0,
+        taille = 0,
+        sauce = 0;
+
   Pizza(this.id, this.title, this.garniture, this.image, this.price, {this.pate = 0, this.taille = 0, this.sauce = 0});
 }
